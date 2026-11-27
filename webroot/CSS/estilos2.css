@@ -20,47 +20,60 @@ header p {
     margin: 0;
 }
 
+body {
+    background-color: #f4f5f7; /* Fondo gris muy suave para que las tarjetas destaquen */
+}
+
 main {
     display: grid;
-    grid-template-columns: repeat(8, auto); 
+    grid-template-columns: repeat(4, auto);
     max-width: 1200px;
     row-gap: 10%;
-    column-gap: 1%; 
-    margin: 40px auto; 
-    background-color: #f7f7f7;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    column-gap: 1%;
+    margin: 5% auto;
+    background-color: transparent; /* Elimina el fondo gris en bloque para dejar respirar las tarjetas */
 }
 
-div {
+main div {
     box-sizing: border-box;
-    border: 1px solid black; 
     display: grid;
-    justify-content: center; 
-    padding: 20px 20px; 
+    place-items: center;
+    min-height: 150px; /* Les da más altura y un tamaño uniforme */
+    padding: 35px 25px; /* Más espacio interior */
     text-align: center;
     margin-bottom: 10%;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-top: 5px solid #1a1b1e; /* Acento negro */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
 }
 
-div:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    border-color: black;
-    background-color: white; 
+main div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: #000000; /* Borde negro al pasar el ratón */
 }
 
-div p, div a {
-    font-family: 'Times New Roman', serif; 
-    font-size: 1.5rem; 
-    font-weight: bold;
-    color: black;
-    text-decoration: none; 
-    margin-bottom: 10px;
-    padding: 5px;
+main div p,
+main div a {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 1.15rem; /* Texto un poco más grande */
+    font-weight: 600;
+    color: #1a1b1e;
+    text-decoration: none;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    transition: color 0.25s ease;
 }
 
-
-
+main div:hover p,
+main div:hover a {
+    color: #000000; /* Negro puro al pasar el ratón */
+}
 
 footer {
     background-color: black;
